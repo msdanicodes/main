@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forell-Agency</title>
-    <style></style>
+    <link href="main-syle.css" rel="stylesheet">
 </head>
 <body>
-    <nav id="mainlinks">
+    <nav class="mainlinks">
        <h3 class="navbarhead">Forell-Agency</h3>
-       <ul class="navlinks">
-         <li><a href="#home">Home</a></li>
-         <li><a href="#services-offered">Services</a></li>
-         <li><a href="#how-it-works">How it works</a></li>
-         <li><a href="#benefits">Benefits</a></li>
-         <li><a href="#testimonials">Testimonials</a></li>
-       </ul> 
+       <p class="navlinks">
+            <a href="#home">Home</a>
+            <a href="#services-offered">Services</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#testimonials">Testimonials</a>
+       </p> 
 
-       <button onclick="getstarted()"><a href="get-started.html">Get started</a></button>
+       <button onclick="getstarted()" class="cta-button"><a href="get-started.html">Get started</a></button>
     </nav>
 
     <section class="hero-section" id="home">
@@ -26,41 +26,43 @@
             <h2><i>Plan smarter. Host better. Impress effortlessly.</i></h2>
         </header>
         <p>Forell-Agency is inspired by the need for change in organization of events.<br>Forell agency revolutionalizes event management by ensuringyour special day has exactly the audience you desire-no more no less.. <br> it's founded by Kunde Daniella Olaere in the year 2025.</p>
-        <button onclick="getstarted()"><a href="get-started.html">Get started</a></button>
+        <button onclick="getstarted()" class="cta-button2"><a href="get-started.html">Get started</a></button>
     </section>
 
     <section class="sub-section" id="services-offered">
-        <div class="content-wrapper">
-            <div class="text-area">
-                <h2>Overview</h2>
-                <p>Forell-Agency is your trusted partner in seamless guest management for events of any scale. We help event hosts simplify the invitation process, track attendance, and deliver a premium welcome experience for every guest. From account creation to guest verification at the event venue, we provide a modern, secure, and efficient solution that elevates your entire event experience. we offer services such as;
-                    <dl>
-                        <dt>Guest Invitation Management</dt>
-                        <dd>We handle the full process of sending personalized invitations to your guests, complete with unique access codes for quick entry on the event day.</dd>
-                        <dt>Secure Guest Verification</dt>
-                        <dd>Each guest receives a randomly generated code, ensuring only verified invitees gain access to your event. Our system supports fast and seamless check-in at the venue.</dd>
-                        <dt>Event Data Collection</dt>
-                        <dd>Hosts can create an account and provide key event details. We ensure accurate guest data management to support smooth planning and coordination.</dd>
-                        <dt>Automated Approval & Notification</dt>
-                        <dd>Once a host submits their event details, our team reviews and approves the request. A customized invitation link is then generated and sent directly to the host for distribution.</dd>
-                        <dt>Real-Time Guest Tracking</dt>
-                        <dd>Monitor confirmed, pending, and attended guests in real time for better event flow and organization.</dd>
-                    </dl>
-                </p>
+        <div class="miss">
+            <h2 class="mistake">Overview</h2>
+            <div class="content-wrapper">
+                <div class="text-area">
+                    <p>Forell-Agency is your trusted partner in seamless guest management for events of any scale. We help event hosts simplify the invitation process, track attendance, and deliver a premium welcome experience for every guest. From account creation to guest verification at the event venue, we provide a modern, secure, and efficient solution that elevates your entire event experience. we offer services such as;
+                        <dl>
+                            <dt>Guest Invitation Management</dt>
+                            <dd>We handle the full process of sending personalized invitations to your guests, complete with unique access codes for quick entry on the event day.</dd>
+                            <dt>Secure Guest Verification</dt>
+                            <dd>Each guest receives a randomly generated code, ensuring only verified invitees gain access to your event. Our system supports fast and seamless check-in at the venue.</dd>
+                            <dt>Event Data Collection</dt>
+                            <dd>Hosts can create an account and provide key event details. We ensure accurate guest data management to support smooth planning and coordination.</dd>
+                            <dt>Automated Approval & Notification</dt>
+                            <dd>Once a host submits their event details, our team reviews and approves the request. A customized invitation link is then generated and sent directly to the host for distribution.</dd>
+                            <dt>Real-Time Guest Tracking</dt>
+                            <dd>Monitor confirmed, pending, and attended guests in real time for better event flow and organization.</dd>
+                        </dl>
+                    </p>
+                </div>
+                <div class="video-area"><video src="clip1" height="300px" width="300px"></video></div>
             </div>
-            <div class="video-area"><video src="clip1" height="300px" width="300px"></video></div>
         </div>
     </section>
 
     <Section class="sub-section" id="how-it-works">
-        <div class="step-grid">
         <h2>How It Works</h2>
+        <div class="step-grid">
             <div class="step-frame">
                 <div class="steps">1</div>
                 <h3>Create an Account</h3>
                 <p>Event hosts sign up on the platform and provide basic information about their event.</p>
             </div>
-            <div class="step frame">
+            <div class="step-frame">
                 <div class="steps">2</div>
                 <h3>Submit Event Details</h3>
                 <p>Hosts fill in the required data, including event type, date, venue, and guest list.</p>
@@ -94,42 +96,44 @@
     </Section>
 
      <section class="sub-section" id="benefits">
-        <div class="content-wrapper">
-            <div class="text-area">
-                <h2>Why Choose Forell-Agency</h2>
-                <p>
-                    <dl>
-                        <dt>Professional Guest Handling</dt>
-                        <dd>Leave your guest logistics to experts for a polished, stress-free experience.</dd>
-                        <dt>Fast & Secure Event Entry</dt>
-                        <dd>Unique entry codes reduce congestion and eliminate unauthorized access.</dd>
-                        <dt>Improved Event Coordination</dt>
-                        <dd>Real-time guest data helps you plan seating, catering, and venue capacity more accurately.</dd>
-                        <dt>Time-Saving and Convenient</dt>
-                        <dd>Our automated system handles invitations, approvals, and validations—so you can focus on the event itself.</dd>
-                        <dt>Reliable & Scalable</dt>
-                        <dd>Whether you're hosting a small private gathering or a large corporate event, our system adapts to meet your needs</dd>
-                    </dl>
-                </p>
+        <div class="miss">
+            <h2>Why Choose Forell-Agency</h2>
+            <div class="content-wrapper">
+                <div class="text-area">
+                    <p>
+                        <dl>
+                            <dt>Professional Guest Handling</dt>
+                            <dd>Leave your guest logistics to experts for a polished, stress-free experience.</dd>
+                            <dt>Fast & Secure Event Entry</dt>
+                            <dd>Unique entry codes reduce congestion and eliminate unauthorized access.</dd>
+                            <dt>Improved Event Coordination</dt>
+                            <dd>Real-time guest data helps you plan seating, catering, and venue capacity more accurately.</dd>
+                            <dt>Time-Saving and Convenient</dt>
+                            <dd>Our automated system handles invitations, approvals, and validations—so you can focus on the event itself.</dd>
+                            <dt>Reliable & Scalable</dt>
+                            <dd>Whether you're hosting a small private gathering or a large corporate event, our system adapts to meet your needs</dd>
+                        </dl>
+                    </p>
+                </div>
+                <div class="video-area"><video src="clip2"></video></div>
             </div>
-            <div class="video-area"><video src="clip2"></video></div>
         </div>
     </section>
 
     <section class="sub-section" id="testimonials">
-        <div class="testimonial-grid">
         <h2>Ratings</h2>
-            <div class="testimonial-frame">
+        <div class="testimonial-grid">
+            <div class="testimonial-frame a">
                 <div class="author">— Adeola Events Co.</div>
-                <div class="remark">Their system made our invitation process faster and more organized. The check-in experience was smooth and professional.</div>
+                <div class="remark"><i>Their system made our invitation process faster and more organized. The check-in experience was smooth and professional.</i></div>
             </div>
-            <div class="testimonial-frame">
+            <div class="testimonial-frame b">
                 <div class="author">— Royal Garden Weddings</div>
-                <div class="remark">The verification process was seamless. Our guests appreciated the smooth entry experience.</div>
+                <div class="remark"><i>The verification process was seamless. Our guests appreciated the smooth entry experience.</i></div>
             </div>
-            <div class="testimonial-frame">
-                <div class="authors">— Metro Corporate Services</div>
-                <div class="remark">From account creation to event day, everything felt well-structured and effortless.</div>
+            <div class="testimonial-frame c">
+                <div class="author">— Metro Corporate Services</div>
+                <div class="remark"><i>From account creation to event day, everything felt well-structured and effortless.</i></div>
             </div>
         </div>
     </section>

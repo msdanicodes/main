@@ -4,15 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get started</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #000000;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.6;
+        }
+
+        .started {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Create an account</h1>
-    <p>
-        <label for="email">Email address:</label>
-        <input type="text" name="email-address" id="email-address" placeholder="josephbella@gmail.com">
-    </p>
-    <p><button onclick="send()">Send</button></p>
-    <!--at this point there is supposed to be a verfication by the gmail before continuing account creation.-->
+    <div class="started">
+        <h1>Create an account</h1>
+        <p>
+            <label for="email">Email address:</label>
+            <input type="text" name="email-address" id="email-address" placeholder="josephbella@gmail.com">
+        </p>
+        <p><button onclick="send()">Send</button></p>
+        <!--at this point there is supposed to be a verfication by the gmail before continuing account creation.-->
+    </div>
 
     <p>
         <label for="username">Username:</label>
