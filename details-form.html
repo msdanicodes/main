@@ -4,68 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Details Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f4ef;
+            color: #1d1d1d;
+            font-family: 'Jost', sans-serif;
+            min-height: 100vh;   
+            padding: 0px 20px;       
+        }
+
+        .field {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 1000px;
+            margin: 50px auto;
+            border-radius: 4px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .details-head {
+            background: linear-gradient(120deg, #11a44a 0%, #26623d 50%, #1a4a2e 100%);
+            color: #f7f4ef;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-between;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+            letter-spacing: 1.7px;
+        }
+
+        p {
+            padding-left: 10px;
+        }
+
+        .details-date {
+            text-align: end;
+            padding: 0px 10px 10px 0px;
+            color: #ffffff;
+        }
+
+        .date {
+            color: #ffffff;
+        }
+
+        .date-label {
+            width: 20%;
+            background: #f7f4ef;
+        }
+
+        .details {
+           padding-left: 10px;
+           padding-right: 10px;
+           margin-bottom: 20px;
+        }
+
+        h2 {
+            padding-bottom: 20px;
+            padding-top: 10px;
+            letter-spacing: 1.7px;
+        }
+
+        .details-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .forms {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: #26623d;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px 14px;
+            border-radius: 2px;
+            border: #11a44a 1px solid;
+            color: none;
+            font-family: 'Jost', sans-serif;
+            font-size: 15px; 
+            color: #1d1d1d;
+            background: #f7f4ef;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        
+        .check {
+            width: 3%;
+        }
+        
+        .end {
+            background: linear-gradient(120deg, #26623d 0%, #1a4a2e 100%);
+            color: #f7f4ef;
+            font-family: 'Jost', sans-serif;
+            padding: 13px;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+            font-size: 13px;
+            font-weight: 500;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.15s;
+        }
+        .end:hover {
+            background: #11a44a;
+            transform: translateY(-1px);
+        }
+        
+
+    </style>
 </head>
 <body>
-    <h1>EVENT DETAILS FORM</h1>
-    <P>This form should be filled in CAPITAL LETTERS</P>
-    <P>
-        <label for="date">Date:</label>
-        <input type="date" name="date" id="date">
-    </P>
+    <div class="field">
+        <div class="details-head">
+            <h1>EVENT DETAILS FORM</h1>
+            <P>This form should be filled in CAPITAL LETTERS</P>
+            <div class="details-date">
+                <label for="date" class="date">Date:</label>
+                <input type="date" name="date" id="date" class="date-label">
+            </div>
+        </div>
 
-    <h2>PERSONAL INFORMATION</h2>
-    <P>
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title" placeholder="Enter your title">
-    </P>
+        <div class="details">
+            <h2>PERSONAL INFORMATION</h2>
+            <div class="details-form">
+                <div class="forms">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" placeholder="Enter your title">
+                </div>
 
-    <P>
-        <label for="Name">Full-Name:</label>
-        <input type="text" name="Full-Name" id="Full-Name" placeholder="Enter your full name">
-    </P>
+                <div class="forms">
+                    <label for="Name">Full-Name:</label>
+                    <input type="text" name="Full-Name" id="Full-Name" placeholder="Enter your full name">
+                </div>
 
-    <P>
-        <label for="event-type">Type of event:</label>
-        <input type="list" id="event-type" name="event-type" id="event-type" placeholder="select type of event">
-        <datalist id="event-type" name="event-type">
-            <option value="wedding">Wedding</option>
-            <option value="convocation">Convocation</option>
-            <option value="matriculation">Matriculation</option>
-            <option value="promotion">Promotion</option>
-            <option value="birthday">Birthday</option>
-            <option value="anniversary">Anniversaryl</option>
-            <option value="burial">Burial</option>
-            <option value="easter">Easter</option>
-            <option value="others">Others; please specify</option>
-        </datalist>
-    </P>
+                <div class="forms">
+                    <label for="event type">Type of event:</label>
+                    <input list="event type" id="event-type" name="event-type" id="event-type" placeholder="Select type of event">
+                        <datalist id="event type" name="event-type">
+                            <option value="wedding">Wedding</option>
+                            <option value="convocation">Convocation</option>
+                            <option value="matriculation">Matriculation</option>
+                            <option value="promotion">Promotion</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversaryl</option>
+                            <option value="burial">Burial</option>
+                            <option value="easter">Easter</option>
+                            <option value="others">Others; please specify</option>
+                        </datalist>
+                </div>
 
-    <p>
-        <label for="Date of event"> Date of event: </label>
-        <input type="datetime-local" name="date/time-of-event"  id="date/time-of-event">
-    </p>
+                <div class="forms">
+                    <label for="Date of event"> Date of event: </label>
+                    <input type="datetime-local" name="date/time-of-event"  id="date/time-of-event">
+                </div>
 
-    <p>
-        <label for="no-of-invitees">Number of invitees:</label>
-        <input type="number" name="number" id="number" min="50" max="1000" step="10" placeholder="Enter no of guests by 10">
-    </p>
+                <div class="forms">
+                    <label for="no-of-invitees">Number of invitees:</label>
+                    <input type="number" name="number" id="number" min="50" max="1000" step="10" placeholder="Enter no of guests by 10">
+                </div>
     
-    <p>
-        <label for="email">Email adress:</label>
-        <input type="email" name="email" id="email" placeholder="Enter email adress">
-    </p>
+                <div class="forms">
+                    <label for="email">Email adress:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email adress">
+                </div>
 
-    <p> 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" name="phone" id="phone" placeholder="+234 XXX-XXX-XXXX" pattern="^\+234\s?\d{3}-\d{4}$" title="Use this format: e.g +234-904-292-1123">
-    </p> 
+                <div class="forms"> 
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+234 XXX-XXX-XXXX" pattern="^\+234\s?\d{3}-\d{4}$" title="Use this format: e.g +234-904-292-1123">
+                </div> 
 
-    <p>
-        <input type="checkbox" id="confirmation-point">I hereby agree that all informations given by me are correct.
-    </p>
+                <div class="form">
+                    <input type="checkbox" id="confirmation-point" class="check">I hereby agree that all informations given by me are correct.
+                </div>
 
-    <p>
-        <input type="submit">
-    </p>
+                <div class="forms">
+                    <input type="submit" class="end">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
